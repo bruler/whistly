@@ -4,19 +4,33 @@
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "compile": "browserify -t [ babelify --presets [ react es2015 ] ] app/app.js -o dist/scripts/app.js"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/footl/whistly",
   "keywords": [
-    "Electron",
-    "quick",
+    "electron",
     "start",
-    "tutorial",
-    "demo"
+    "react",
+    "webpack",
+    "music"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "Kapil Gupta",
+  "license": "MIT",
   "devDependencies": {
-    "electron": "^1.4.1"
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "electron": "^1.4.1",
+    "electron-prebuilt": "^1.4.13"
+  },
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "node-soundcloud": "0.0.6",
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8",
+    "react-loading": "0.0.9",
+    "react-soundplayer": "^0.3.6"
   }
 }
